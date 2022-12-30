@@ -1,0 +1,93 @@
+.card {
+    position: relative;
+    border: 1px solid blue;
+    border-radius:20px;
+    border-color: #424242;
+    padding: 10px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    /* box-shadow: -5px 5px 10px 0px #2b2b2b */
+}
+
+.topdiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomdiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.noteContainer{
+    overflow-y: scroll;
+}
+
+.container{
+    display: inline-flex;
+    height: 50%;
+}
+
+.title{
+    width: 100%;
+    margin-right: 5px;
+}
+
+.id {
+    color: #424242;
+    align-self: flex-end;
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.5);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 15px;
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+/* .myButton {
+	background-color:#5c6cff;
+	border-radius:28px;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:10px 15px;
+    border:0px solid;
+    align-self: flex-end;
+
+
+}
+.myButton:hover {
+	background-color:#85b4ff;
+} */
+
+.myButton {
+	background-color:#5c6cff;
+    border-radius: 90px;
+	cursor:pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.myButton:hover {
+	background-color:#85b4ff;
+}
+
+.closeButtonNote{
+    margin-left: 5px;
+    cursor:pointer;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
