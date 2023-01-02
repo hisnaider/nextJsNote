@@ -1,5 +1,5 @@
 
-export default function CreateNoteModal({ isOpen, onClose, children }) {
+export default function CreateNoteModal({ isOpen, children }) {
   if (!isOpen) {
     return null;
   }

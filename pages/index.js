@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TextComponent from "../components/textComponent"
 import CreateNoteModal from "../components/createNoteModal"
-import NoteModal from '../components/noteModal';
 import {FaRegWindowClose} from "react-icons/fa";
 import { CiCirclePlus } from "react-icons/ci";
 
@@ -60,7 +59,7 @@ function NotesApp() {
         </form>
       </CreateNoteModal>
 
-      <NoteModal isOpen={select} onClose={()=>setSelect(null)} note={select} editNote={editNote}>
+      <CreateNoteModal isOpen={select} onClose={()=>setSelect(null)}>
         <form className="form" onSubmit={editNote}>
           <label htmlFor="note" className="formTitle">Editar nota</label>
           <p className="inputTitle">Titulo</p>
@@ -69,10 +68,10 @@ function NotesApp() {
           <input className="bigInput" type="text" id="description" defaultValue={select?.description}/>
 
           
-          <button className="addButton" type="submit">Adicionar</button>
-          <FaRegWindowClose className="closeButton" onClick={()=>setOpenCreateNoteModal(false)} color={"red"} size={25}/>
+          <button className="addButton" type="submit">Editar</button>
+          <FaRegWindowClose className="closeButton" onClick={()=>setSelect(null)} color={"red"} size={25}/>
         </form>
-      </NoteModal>
+      </CreateNoteModal>
 
     </div>
   );
