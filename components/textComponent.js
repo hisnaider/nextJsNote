@@ -3,7 +3,7 @@ import {CiEdit} from "react-icons/ci";
 import Moment from 'moment';
 import "moment/locale/pt-br"
 
-export default function TextComponente({note, deleteNote, select}){
+export default function TextComponent({note, deleteNote, select}){
     return (
       <div className="card">
         
@@ -18,7 +18,6 @@ export default function TextComponente({note, deleteNote, select}){
           <p className="id">{Moment(note.date).format("ll")}</p>
           <CiEdit className="bottomdiv" size={30} color={"rgba(255,255,255,0.5)"} onClick={select}/>
         </div>
-        {/* <button className="myButton" onClick={deleteNote} type="submit">delete</button> */}
       </div>
     )
   }
